@@ -2,29 +2,29 @@ package org.javapro3.entities;
 
 import org.javapro3.annotations.*;
 
-public class MyClassA implements MyClasses {
+public class MyClassD implements MyClasses {
     private int a;
     private int b;
 
-    public MyClassA() {
+    public MyClassD() {
     }
 
-    public MyClassA(int a, int b) {
+    public MyClassD(int a, int b) {
         this.a = a;
         this.b = b;
     }
 
     @BeforeSuite
-    public static void additionA(){
+    public void additionA(){
         System.out.println("run additionA");
     }
 
     @AfterSuite
     public static void differenceA(){
-        System.out.println("run difference");
+        System.out.println("run differenceA");
     }
 
-    @Test(priority=0)
+    @Test(priority=2)
     public void multiplication2(){
         System.out.println("run multiplication2");
     }
